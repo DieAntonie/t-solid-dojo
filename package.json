@@ -1,0 +1,39 @@
+{
+  "name": "t-solid-dojo",
+  "version": "1.0.0",
+  "description": "Sample projects for T-SOLID Dojo series",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DieAntonie/t-solid-dojo.git"
+  },
+  "keywords": [
+    "tdd",
+    "srp",
+    "ocp",
+    "lsp",
+    "isp",
+    "dip",
+    "node",
+    "dojo",
+    "solid",
+    "javascript",
+    "boilerplate",
+    "exercise",
+    "practice",
+    "training",
+    "learning",
+    "beginner"
+  ],
+  "author": "Chris Antonie Pieterse",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/DieAntonie/t-solid-dojo/issues"
+  },
+  "homepage": "https://github.com/DieAntonie/t-solid-dojo#readme"
+}
