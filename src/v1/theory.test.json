@@ -1,0 +1,290 @@
+{
+    "add": {
+        "missing": [
+            {
+                "serial": "ABC12341",
+                "title": "The Book: Volume 3",
+                "author": "Arthur Read",
+                "price": 100.00
+            },
+            {
+                "isbn": "0719384222",
+                "title": "Words and how to read them",
+                "author": "Lexi Con",
+                "price": 19.99
+            },
+            {
+                "isbn": "0719384222",
+                "serial": "98765ZX",
+                "author": "Lexi Con",
+                "price": 19.99
+            },
+            {
+                "isbn": "0195621182",
+                "serial": "2001010163",
+                "title": "The 1st of January 2001 was a Monday",
+                "price": 96.30
+            },
+            {
+                "isbn": "0204810191",
+                "serial": "X999",
+                "title": "1000 Copies",
+                "author": "Exclusive"
+            },
+            {
+                "isbn": "",
+                "serial": "98765AA",
+                "title": "Words and how to read them",
+                "author": "Lexi Con",
+                "price": 19.99
+            },
+            {
+                "isbn": "0719384222",
+                "serial": "",
+                "title": "Words and how to read them",
+                "author": "Lexi Con",
+                "price": 19.99
+            },
+            {
+                "isbn": "0195621182",
+                "serial": "2001010163",
+                "title": "",
+                "author": "Pope Gregory XIII",
+                "price": 96.30
+            },
+            {
+                "isbn": "0204810191",
+                "serial": "X999",
+                "title": "1000 Copies",
+                "author": "",
+                "price": 999.00
+            },
+            {
+                "isbn": "0901304131",
+                "serial": "xkcd",
+                "title": "The webcomic of romance, sarcasm, math, and language",
+                "author": "Randall Patrick Munroe ",
+                "price": ""
+            }
+        ],
+        "invalid": [
+            {
+                "isbn": "0837746055",
+                "serial": "ABC12341",
+                "title": "The Book: Volume 3",
+                "author": "Arthur Read",
+                "price": 100.00
+            },
+            {
+                "isbn": "O719384222",
+                "serial": "98765AA",
+                "title": "Words and how to read them",
+                "author": "Lexi Con",
+                "price": 19.99
+            },
+            {
+                "isbn": "019562",
+                "serial": "2001010163",
+                "title": "The 1st of January 2001 was a Monday",
+                "author": "Pope Gregory XIII",
+                "price": 96.30
+            },
+            {
+                "isbn": "0204810191",
+                "serial": "X999",
+                "title": "1000 Copies",
+                "author": "Exclusive",
+                "price": -999.00
+            },
+            {
+                "isbn": "0901304131",
+                "serial": "xkcd",
+                "title": "The webcomic of romance, sarcasm, math, and language",
+                "author": "Randall Patrick Munroe ",
+                "price": "free"
+            },
+            {
+                "isbn": true,
+                "serial": "ABC12341",
+                "title": "The Book: Volume 3",
+                "author": "Arthur Read",
+                "price": 100.00
+            },
+            {
+                "isbn": "0719384222",
+                "serial": true,
+                "title": "Words and how to read them",
+                "author": "Lexi Con",
+                "price": 19.99
+            },
+            {
+                "isbn": "0195621182",
+                "serial": "2001010163",
+                "title": true,
+                "author": "Pope Gregory XIII",
+                "price": 96.30
+            },
+            {
+                "isbn": "0204810191",
+                "serial": "X999",
+                "title": "1000 Copies",
+                "author": true,
+                "price": 999.00
+            },
+            {
+                "isbn": "0901304131",
+                "serial": "xkcd",
+                "title": "The webcomic of romance, sarcasm, math, and language",
+                "author": "Randall Patrick Munroe ",
+                "price": true
+            },
+            {
+                "isbn": 42,
+                "serial": "ABC12341",
+                "title": "The Book: Volume 3",
+                "author": "Arthur Read",
+                "price": 100.00
+            },
+            {
+                "isbn": "0719384222",
+                "serial": 42,
+                "title": "The Book: Volume 3",
+                "author": "Arthur Read",
+                "price": 100.00
+            },
+            {
+                "isbn": "0719384222",
+                "serial": "98765AA",
+                "title": 42,
+                "author": "Lexi Con",
+                "price": 19.99
+            },
+            {
+                "isbn": "0195621182",
+                "serial": "2001010163",
+                "title": "The 1st of January 2001 was a Monday",
+                "author": 42,
+                "price": 96.30
+            }
+        ],
+        "duplicate": [
+            {
+                "first": {
+                    "isbn": "0837746051",
+                    "serial": "ABC12341",
+                    "title": "The Book: Volume 3",
+                    "author": "Arthur Read",
+                    "price": 100.00
+                },
+                "duplicate": {
+                    "isbn": "0837746051",
+                    "serial": "ABC12341",
+                    "title": "The Book: Volume 3",
+                    "author": "Arthur Read",
+                    "price": 100.00
+                }
+            },
+            {
+                "first": {
+                    "isbn": "0719384222",
+                    "serial": "98765AA",
+                    "title": "Words and how to read them",
+                    "author": "Lexi Con",
+                    "price": 19.99
+                },
+                "duplicate": {
+                    "isbn": "0719384222",
+                    "serial": "98765AA",
+                    "title": "Numbers and how to count them",
+                    "author": "Al Gebra",
+                    "price": 420.00
+                }
+            }
+        ],
+        "valid": [
+            [
+                {
+                    "isbn": "0837746051",
+                    "serial": "ABC12341",
+                    "title": "The Book: Volume 3",
+                    "author": "Arthur Read",
+                    "price": 100.00
+                },
+                {
+                    "isbn": "0837746051",
+                    "serial": "ABC12342",
+                    "title": "The Book: Volume 3",
+                    "author": "Arthur Read",
+                    "price": 100.00
+                },
+                {
+                    "isbn": "0837746051",
+                    "serial": "ABC12343",
+                    "title": "The Book: Volume 3",
+                    "author": "Arthur Read",
+                    "price": 100.00
+                },
+                {
+                    "isbn": "0837746051",
+                    "serial": "ABC12344",
+                    "title": "The Book: Volume 3",
+                    "author": "Arthur Read",
+                    "price": 100.00
+                },
+                {
+                    "isbn": "0837746051",
+                    "serial": "ABC12345",
+                    "title": "The Book: Volume 3",
+                    "author": "Arthur Read",
+                    "price": 100.00
+                }
+            ],
+            [
+                {
+                    "isbn": "0719384222",
+                    "serial": "98765AA",
+                    "title": "Words and how to read them",
+                    "author": "Lexi Con",
+                    "price": 19.99
+                },
+                {
+                    "isbn": "0195621182",
+                    "serial": "2001010163",
+                    "title": "The 1st of January 2001 was a Monday",
+                    "author": "Pope Gregory XIII",
+                    "price": 96.30
+                }
+            ],
+            [
+                {
+                    "isbn": "0204810191",
+                    "serial": "X999",
+                    "title": "1000 Copies",
+                    "author": "Exclusive",
+                    "price": 999.00
+                },
+                {
+                    "isbn": "0719384222",
+                    "serial": "98765ZX",
+                    "title": "Words and how to read them",
+                    "author": "Lexi Con",
+                    "price": 19.99
+                }
+            ],
+            [
+                {
+                    "isbn": "0901304131",
+                    "serial": "xkcd",
+                    "title": "The webcomic of romance, sarcasm, math, and language",
+                    "author": "Randall Patrick Munroe ",
+                    "price": 0.00
+                }
+            ]
+        ]
+    },
+    "remove": {
+        "invalid": [],
+        "valid": []
+    },
+    "list": []
+}
