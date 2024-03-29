@@ -283,7 +283,96 @@
         ]
     },
     "remove": {
-        "invalid": [],
+        "invalid": [
+            null,
+            [],
+            {},
+            {
+                "serial": "xkcd"
+            }
+        ],
+        "missing": [
+            {
+                "library": [
+                    {
+                        "isbn": "0837746051",
+                        "serial": "ABC12341",
+                        "title": "The Book: Volume 3",
+                        "author": "Arthur Read",
+                        "price": 100.00
+                    },
+                    {
+                        "isbn": "0837746051",
+                        "serial": "ABC12342",
+                        "title": "The Book: Volume 3",
+                        "author": "Arthur Read",
+                        "price": 100.00
+                    },
+                    {
+                        "isbn": "0837746051",
+                        "serial": "ABC12343",
+                        "title": "The Book: Volume 3",
+                        "author": "Arthur Read",
+                        "price": 100.00
+                    },
+                    {
+                        "isbn": "0837746051",
+                        "serial": "ABC12344",
+                        "title": "The Book: Volume 3",
+                        "author": "Arthur Read",
+                        "price": 100.00
+                    },
+                    {
+                        "isbn": "0837746051",
+                        "serial": "ABC12345",
+                        "title": "The Book: Volume 3",
+                        "author": "Arthur Read",
+                        "price": 100.00
+                    }
+                ],
+                "remove": {
+                    "isbn": "0901304131",
+                    "serial": "xkcd"
+                }
+            },
+            {
+                "library": [
+                    {
+                        "isbn": "0901304131",
+                        "serial": "xkcd",
+                        "title": "The webcomic of romance, sarcasm, math, and language",
+                        "author": "Randall Patrick Munroe ",
+                        "price": 0.00
+                    }
+                ],
+                "remove": {
+                    "isbn": "0901304131",
+                    "serial": "dckx"
+                }
+            },
+            {
+                "library": [
+                    {
+                        "isbn": "0901304131",
+                        "serial": "xkcd",
+                        "title": "The webcomic of romance, sarcasm, math, and language",
+                        "author": "Randall Patrick Munroe ",
+                        "price": 0.00
+                    }
+                ],
+                "remove": {
+                    "isbn": "0901304130",
+                    "serial": "xkcd"
+                }
+            },
+            {
+                "library": [],
+                "remove": {
+                    "isbn": "0901304131",
+                    "serial": "xkcd"
+                }
+            }
+        ],
         "valid": []
     },
     "list": []

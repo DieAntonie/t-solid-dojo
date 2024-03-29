@@ -7,107 +7,109 @@ describe('Library', () => {
         theoryData.add.missing.forEach(missingData =>
             it(`should not add ${JSON.stringify(missingData)} with missing infromation to invertory`, () => {
                 // given
-                let inventory = new Inventory();
+                const library = new Library();
 
                 // when
-                let inventoryAdd = () => inventory.add(missingData);
+                const libraryAdd = () => library.add(missingData);
 
                 // then
-                assert.throws(inventoryAdd, /^Error: Missing Information$/);
+                assert.throws(libraryAdd, /^Error: Missing Information$/);
             })
         );
 
         theoryData.add.invalid.forEach(invalidData =>
             it(`should not add ${JSON.stringify(invalidData)} with invalid infromation to invertory`, () => {
                 // given
-                let inventory = new Inventory();
-    
+                const library = new Library();
+
                 // when
-                let inventoryAdd = () => inventory.add(invalidData);
-    
+                const libraryAdd = () => library.add(invalidData);
+
                 // then
-                assert.throws(inventoryAdd, /^Error: Invalid Information$/);
+                assert.throws(libraryAdd, /^Error: Invalid Information$/);
             })
         );
 
         theoryData.add.duplicate.forEach(duplicateData =>
             it(`should not add ${JSON.stringify(duplicateData.duplicate)} as duplicate of ${duplicateData.first} to invertory`, () => {
                 // given
-                let inventory = new Inventory();
-                inventory.add(duplicateData.first);
+                const library = new Library();
+                library.add(duplicateData.first);
 
                 // when
-                let inventoryAdd = () => inventory.add(duplicateData.duplicate);
+                const libraryAdd = () => library.add(duplicateData.duplicate);
 
                 // then
-                assert.throws(inventoryAdd, /^Error: Duplicate Entry$/);
+                assert.throws(libraryAdd, /^Error: Duplicate Book$/);
             })
         );
 
         theoryData.add.valid.forEach(validData =>
             it(`should add ${JSON.stringify(validData)} to invertory`, () => {
                 // given
-                let inventory = new Inventory();
+                const library = new Library();
 
                 // when
-                validData.forEach(entry => inventory.add(entry));
+                validData.forEach(book => {
 
-                // then
-                assert.equal(inventory.count, validData.length);
-                assert.equal(inventory.items, validData);
+                    // then
+                    assert.ok(library.add(book));
+                });
             })
         );
     });
 
-    describe('Remove Item from Library', () => {
-        it('should not remove from library when library is empty', () => {
+    describe('Remove Book from Library', () => {
+        it(`should not remove with missing query data`, () => {
             // given
-            let inventory = new Inventory();
-            let book = { isdn: 123, printNr: 123 };
+            let library = new Library();
+            invalidData.library.forEach(library.add)
 
             // when
-            let inventoryRemove = () => inventory.remove(book);
+            let libraryRemove = () => library.remove(invalidData.remove);
 
             // then
-            assert.throws(inventoryRemove, /^Error: Inventory Empty$/);
-        });
+            assert.throws(libraryRemove, /^Error: Book not Found$/);
+        })
 
-        it('should not add to inventory when information is invalid', () => {
-            // given
-            let inventory = new Inventory();
-            let book = { isdn: 123, printNr: 123 };
+        theoryData.remove.missing.forEach(missingdData =>
+            it(`should not remove ${JSON.stringify(missingdData.remove)} with no match in library`, () => {
+                // given
+                let library = new Library();
+                missingdData.library.forEach(library.add)
 
-            // when
-            let inventoryRemove = () => inventory.remove(book);
+                // when
+                let libraryRemove = () => library.remove(missingdData.remove);
 
-            // then
-            assert.throws(inventoryAdd, /^Error: Item not Found$/);
-        });
+                // then
+                assert.throws(libraryRemove, /^Error: Book not Found$/);
+            })
+        );
     });
 
     describe('List Items in Library', () => {
         it('should not remove from library when library is empty', () => {
             // given
-            let inventory = new Inventory();
+            let library = new Library();
             let book = { isdn: 123, printNr: 123 };
 
             // when
-            let inventoryRemove = () => inventory.remove(book);
+            let libraryRemove = () => library.remove(book);
 
             // then
-            assert.throws(inventoryRemove, /^Error: Inventory Empty$/);
+            assert.throws(libraryRemove, /^Error: Library Empty$/);
         });
 
-        it('should not add to inventory when information is invalid', () => {
+        it('should not add to library when information is invalid', () => {
             // given
-            let inventory = new Inventory();
+            let library = new Library();
             let book = { isdn: 123, printNr: 123 };
 
             // when
-            let inventoryRemove = () => inventory.remove(book);
+            let libraryRemove = () => library.remove(book);
 
             // then
-            assert.throws(inventoryAdd, /^Error: Item not Found$/);
+            assert.throws(libraryAdd, /^Error: Item not Found$/);
         });
     });
 });
